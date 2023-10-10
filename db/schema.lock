@@ -1,0 +1,238 @@
+[
+  {
+    "schema": "foodbank",
+    "table": "versions",
+    "constraints": [
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "versions_pkey",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "versions",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "version",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "versions",
+        "foreign_column_name": "version",
+        "foreign_table_schema": "foodbank"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "version",
+        "udt_name": "int8",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "bigint",
+        "isArray": false
+      },
+      {
+        "column_name": "name",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "md5",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "run_at",
+        "udt_name": "timestamptz",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "timestamp with time zone",
+        "isArray": false
+      }
+    ]
+  },
+  {
+    "schema": "foodbank",
+    "table": "movies",
+    "constraints": [
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "movies_pkey",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "movies",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "movies",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "foodbank"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "int4",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      },
+      {
+        "column_name": "title",
+        "udt_name": "text",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      }
+    ]
+  },
+  {
+    "schema": "foodbank",
+    "table": "food_drive",
+    "constraints": [
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "food_drive_pkey",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "food_drive",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "food_drive",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "foodbank"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "int4",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      },
+      {
+        "column_name": "name",
+        "udt_name": "text",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "date",
+        "udt_name": "date",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "date",
+        "isArray": false
+      },
+      {
+        "column_name": "active",
+        "udt_name": "bool",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "boolean",
+        "isArray": false
+      },
+      {
+        "column_name": "enabled",
+        "udt_name": "bool",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "boolean",
+        "isArray": false
+      }
+    ]
+  },
+  {
+    "schema": "foodbank",
+    "table": "fooddrive",
+    "constraints": [
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "fooddrive_pkey",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "fooddrive",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "fooddrive",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "foodbank"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "int4",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      },
+      {
+        "column_name": "name",
+        "udt_name": "text",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "date",
+        "udt_name": "date",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "date",
+        "isArray": false
+      },
+      {
+        "column_name": "active",
+        "udt_name": "bool",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "boolean",
+        "isArray": false
+      },
+      {
+        "column_name": "enabled",
+        "udt_name": "bool",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "boolean",
+        "isArray": false
+      }
+    ]
+  }
+]
