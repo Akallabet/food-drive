@@ -234,5 +234,151 @@
         "isArray": false
       }
     ]
+  },
+  {
+    "schema": "foodbank",
+    "table": "warehouse",
+    "constraints": [
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "warehouse_pkey",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "warehouse",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "warehouse",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "foodbank"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "int4",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      },
+      {
+        "column_name": "name",
+        "udt_name": "text",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      },
+      {
+        "column_name": "description",
+        "udt_name": "text",
+        "is_nullable": "YES",
+        "is_generated": "NEVER",
+        "data_type": "text",
+        "isArray": false
+      }
+    ]
+  },
+  {
+    "schema": "foodbank",
+    "table": "warehouse_food_drive",
+    "constraints": [
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "warehouse_food_drive_pkey",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "warehouse_food_drive",
+        "constraint_type": "PRIMARY KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": null,
+        "foreign_table_name": "warehouse_food_drive",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "foodbank"
+      },
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "fk_warehouse_food_drive_warehouse_id",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "warehouse_food_drive",
+        "constraint_type": "FOREIGN KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "warehouse_id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": 1,
+        "foreign_table_name": "warehouse",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "foodbank",
+        "loweredTableWithSchemaName": "warehouseFoodDrive",
+        "foreignEntityName": "warehouse",
+        "entityName": "warehouseFoodDrive"
+      },
+      {
+        "constraint_catalog": "fooddrive",
+        "constraint_schema": "foodbank",
+        "constraint_name": "fk_warehouse_food_drive_food_drive_id",
+        "table_catalog": "fooddrive",
+        "table_schema": "foodbank",
+        "table_name": "warehouse_food_drive",
+        "constraint_type": "FOREIGN KEY",
+        "is_deferrable": "NO",
+        "initially_deferred": "NO",
+        "enforced": "YES",
+        "nulls_distinct": null,
+        "column_name": "food_drive_id",
+        "ordinal_position": 1,
+        "position_in_unique_constraint": 1,
+        "foreign_table_name": "food_drive",
+        "foreign_column_name": "id",
+        "foreign_table_schema": "foodbank",
+        "loweredTableWithSchemaName": "warehouseFoodDrive",
+        "foreignEntityName": "foodDrive",
+        "entityName": "warehouseFoodDrive"
+      }
+    ],
+    "columns": [
+      {
+        "column_name": "id",
+        "udt_name": "int4",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      },
+      {
+        "column_name": "warehouse_id",
+        "udt_name": "int4",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      },
+      {
+        "column_name": "food_drive_id",
+        "udt_name": "int4",
+        "is_nullable": "NO",
+        "is_generated": "NEVER",
+        "data_type": "integer",
+        "isArray": false
+      }
+    ]
   }
 ]
